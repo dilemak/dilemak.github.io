@@ -1,0 +1,141 @@
+/* Core Styling */
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    margin: 0;
+    background-color: #f0f7f0; /* Light green base */
+    color: #2e4a2e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+#bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+    z-index: -1;
+}
+
+#wrapper {
+    width: 100%;
+    max-width: 500px; /* Centered narrow view for mobile look */
+    padding: 20px;
+    text-align: center;
+}
+
+/* Header & Nav */
+header .logo {
+    font-size: 3rem;
+    color: #4caf50;
+    margin-bottom: 1rem;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+nav ul li a {
+    display: block;
+    padding: 10px 15px;
+    background: white;
+    border: 1px solid #c8e6c9;
+    border-radius: 20px;
+    text-decoration: none;
+    color: #2e4a2e;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+/* Articles/Sections */
+article {
+    background: white;
+    margin-top: 30px;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    text-align: left;
+}
+
+h2.major {
+    border-bottom: 2px solid #4caf50;
+    padding-bottom: 10px;
+    margin-top: 0;
+    color: #1b331b;
+}
+
+/* Cards & Lists */
+.prop-card, .highlight-box {
+    background: #f9fff9;
+    border: 1px solid #dceddc;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+.map-link {
+    color: #4caf50;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 5px;
+}
+
+.hike-list {
+    list-style: none;
+    padding: 0;
+}
+
+.hike-list li {
+    display: flex;
+    gap: 15px;
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+}
+
+/* Shop Grid */
+.shop-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.shop-item {
+    background: #f1f8f1;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.s-emoji { font-size: 1.5rem; display: block; }
+.s-price { font-weight: bold; display: block; font-size: 1.2rem; }
+
+/* Buttons */
+.book-btn, .c-btn {
+    display: block;
+    text-align: center;
+    padding: 10px;
+    background: #4caf50;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.c-btn.wa { background: #25D366; }
+
+/* Mobile View Adjustments */
+@media (max-width: 480px) {
+    #wrapper { padding: 10px; }
+    article { padding: 15px; }
+    nav ul li a { font-size: 0.8rem; }
+}
