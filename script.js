@@ -1,20 +1,12 @@
-// Function to handle showing only the selected section
-document.querySelectorAll('nav a').forEach(link => {
-    link.addEventListener('click', function(e) {
+// Handle navigation and smooth scroll
+document.querySelectorAll('nav a').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
         e.preventDefault();
-        const targetId = this.getAttribute('href').substring(1);
-        
-        // Scroll to the specific article
-        const element = document.getElementById(targetId);
-        window.scrollTo({
-            top: element.offsetTop - 20,
+        const targetId = this.getAttribute('href');
+        document.querySelector(targetId).scrollIntoView({
             behavior: 'smooth'
         });
-        
-        // Optional: Highlight effect
-        element.style.ring = "2px solid #4caf50";
-        setTimeout(() => { element.style.ring = "none"; }, 1000);
     });
 });
 
-console.log("Kolarovice site ready.");
+console.log("Kolarovice Guide Loaded.");
